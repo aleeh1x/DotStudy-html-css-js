@@ -35,7 +35,7 @@ body {
 }
 
 .conteudo.ativo {
-    margin-left: 440px;
+    margin-left: 460px;
 }
 
 .World {
@@ -157,9 +157,10 @@ body {
     top: 0;
     width: 400px;
     height: 150%;
-    background-color: hwb(44 92% 4% / 0.884);
+    background-color: rgb(245, 242, 235);
     z-index: 2;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s cubic-bezier(.17,.67,.83,.67);
 }   
 
 .menu-lateral.ativo {
@@ -221,7 +222,7 @@ body {
 }
 
 .botao-menu {
-    background-color: hwb(0 41% 59%) ;
+    background-color: #B49883;
     position: fixed;
     left: 20px;
     top: 15px;
@@ -236,7 +237,7 @@ body {
 }
 
 .botao-menu:hover {
-    background-color: hwb(0 21% 79%);
+    background-color: #e7d6c8;
 }
 
 .botao-menu.ativo {
