@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: hsl(0, 0%, 8%);
+    background-color:oklab(15.032% -0.00355 0.03075 / 0.938);
 }
 
 .conteudo {
@@ -61,7 +62,12 @@ body {
     width: 100%;
     height: 100px;
 
-    background: #B49883;
+     background:linear-gradient(
+        to top,
+        #0000,
+        #B49883
+    );
+
 
     display: flex;
     align-items: center;
@@ -78,15 +84,15 @@ body {
 
 .logo {
     position: absolute;
-    left: 33%;
+    left: 30%;
     color: white;
     font-size: 80px;
-    font-family: "Playpen Sans", cursive; 
+    font-family: "Oi", serif;
     font-weight: bold;
 }   
 .topo-direita {
     position: absolute;
-    left: 55%;
+    left: 60%;
     height: 70px;
     width: auto;
 }
