@@ -10,6 +10,10 @@ body {
     overflow-y: auto;
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 .lugar {
     color: #B49883;
     display: flex;
@@ -204,6 +208,7 @@ body {
     font-size: 80px;
     font-family: "Oi", serif;
     font-weight: bold;
+    opacity: 70%;
 }   
 .topo-direita {
     position: absolute;
@@ -226,6 +231,7 @@ body {
     gap: 15px;
     color: white;
     z-index: 2;
+    font-family: 'Saira';
 }
 
 .usuario img {
