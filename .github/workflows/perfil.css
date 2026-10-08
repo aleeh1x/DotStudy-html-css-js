@@ -79,6 +79,15 @@
     border: 2px solid #6c4cff;
 }
 
+.granolaperfil  {
+    
+    height: 300px;
+    width: 300px;   
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #6c4cff;
+}
+
 .nome-usuario {
     font-weight: 800;
 }
@@ -113,6 +122,17 @@
 .notificacao:hover {
     background-color: rgba(255, 255, 255, 0.08);
 }
+.botao-settings {
+    border-radius: 30% ;
+    color:#d8d0c9;
+    background: linear-gradient(to right, transparent, lab(31.37% 5.88 13.51));
+    height: 40%;
+    width: 15%;
+    z-index: 200;
+    top: 20%;
+}
+
+
 .menu-lateral {
     position: fixed;
     left: -400px;
