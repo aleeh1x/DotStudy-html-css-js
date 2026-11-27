@@ -1,0 +1,324 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Playpen+Sans:wght@300;400&display=swap');
+
+
+/* ============================= */
+/* CONFIGURAÇÕES GERAIS */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #403126;
+    color: #F5EDE5;
+
+    font-family: 'Amatic SC', cursive;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.pagina {
+    width: 100%;
+    position: relative;
+}
+
+
+/* ============================= */
+/* CONFIGURAÇÃO DOS BLOCOS */
+/* ============================= */
+
+.bloco {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+
+    position: relative;
+
+    padding: 5%;
+
+    overflow: hidden;
+
+    border-left: 2px solid #FFD43B;
+    border-right: 2px solid #FFD43B;
+}
+
+
+/* ============================= */
+/* BLOCO 1 - GAMIFICAÇÃO */
+/* ============================= */
+
+.gamificacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+/* TÍTULO */
+
+.titulo-gamificacao {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    width: 60%;
+    margin-top: 5%;
+}
+
+.titulo-gamificacao h1 {
+    font-size: clamp(30px, 4vw, 55px);
+    font-weight: normal;
+
+    padding: 15px;
+
+    border: 3px solid #77612E;
+    border-radius: 15px;
+
+    transform: rotate(-2deg);
+}
+
+.aprendizado {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center;
+}
+
+.aprendizado h2 {
+    font-size: clamp(20px, 2.5vw, 35px);
+    font-weight: normal;
+}
+
+.aprendizado i {
+    font-size: clamp(30px, 4vw, 50px);
+
+    margin-top: 5px;
+}
+
+
+/* DESCRIÇÃO */
+
+.descricao-gamificacao {
+    font-size: clamp(16px, 2vw, 24px);
+
+    text-transform: uppercase;
+
+    width: 45%;
+
+    line-height: 1.4;
+
+    margin-top: 10px;
+}
+
+
+/* CAIXAS */
+
+.caixa {
+    border: 6px dashed #FFD43B;
+    border-radius: 35px;
+
+    position: absolute;
+}
+
+.caixa1 {
+    box-sizing: 200px;
+    width: 100%;
+    height: 60%;
+
+    top: 7%;
+    right: 1%;
+}
+
+.fh {
+    position: absolute;
+
+    top: -10px;
+    left: -45px;
+
+    background: #777;
+    color: white;
+
+    border: 4px solid white;
+    border-radius: 50
+}
+
+@media (max-width: 768px) {
+
+    .gamificacao {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+
+        padding: 30px 20px;
+
+        align-content: start;
+        gap: 20px;
+    }
+
+    .titulo-gamificacao {
+        flex-wrap: wrap;
+    }
+
+    .titulo-gamificacao h1 {
+        font-size: 35px;
+    }
+
+    .descricao-gamificacao {
+        width: 100%;
+    }
+
+    .caixa1 {
+        grid-column: 1;
+        grid-row: 3;
+
+        width: 100%;
+        height: 300px;
+    }
+
+    .aprendizado h2 {
+        font-size: 25px;
+    }
+}
+
+.titulo-principal {
+    position: relative;
+}
+
+.gamepad-titulo {
+    position: absolute;
+
+    top: -35px;
+    left: 15px;
+
+    font-size: 55px;
+    color: #FFD43B;
+
+    transform: rotate(-10deg);
+}
+
+/* ============================= */
+/* BLOCO 1 - GAMIFICAÇÃO */
+/* ============================= */
+
+.gamificacao {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: auto auto;
+    align-content: center;
+
+    height: 100vh;
+    min-height: 100vh;
+
+    padding: 4% 5%;
+}
+
+/* TÍTULO E APRENDIZADO */
+
+.titulo-gamificacao {
+    grid-column: 1;
+    grid-row: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    width: 100%;
+    position: relative;
+}
+
+.titulo-gamificacao h1 {
+    font-size: clamp(35px, 3.5vw, 65px);
+    font-weight: normal;
+
+    padding: 15px 10px;
+
+    border: 3px solid #77612E;
+    border-radius: 15px;
+
+    transform: rotate(-2deg);
+}
+
+.aprendizado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    text-align: left;
+}
+
+.aprendizado h2 {
+    font-size: clamp(20px, 2.3vw, 35px);
+    font-weight: normal;
+}
+
+.aprendizado i {
+    font-size: clamp(35px, 4vw, 55px);
+
+    margin-top: 10px;
+}
+
+
+/* DESCRIÇÃO */
+
+.descricao-gamificacao {
+    grid-column: 1;
+    grid-row: 2;
+
+    width: 90%;
+
+    font-size: clamp(18px, 1.8vw, 27px);
+    line-height: 1.4;
+
+    text-transform: uppercase;
+
+    margin-top: 15px;
+}
+
+
+/* CAIXA DE IMAGEM */
+
+.caixa1 {
+    grid-column: 2;
+    grid-row: 1 / 3;
+
+    position: relative;
+
+    width: 100%;
+    height: 80%;
+
+    align-self: center;
+    justify-self: end;
+
+    border: 6px dashed #FFD43B;
+    border-radius: 40px;
+}
+
+
+/* DECORAÇÕES DO PRIMEIRO BLOCO */
+
+.gamificacao .decor1 {
+    top: 5%;
+    left: 5%;
+
+    font-size: 100px;
+}
+
+.gamificacao .decor2 {
+    bottom: 5%;
+    left: 0;
+
+    font-size: 80px;
+}
+
+.gamificacao .decor3 {
+    top: 45%;
+    left: 45%;
+
+    font-size: 100px;
+}
