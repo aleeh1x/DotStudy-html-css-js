@@ -290,3 +290,221 @@ body {
 .botao-menu.ativo {
     left: 320px;
 }
+
+
+/* ============================== */
+/* TELA DE NÍVEIS DOTSTUDY */
+/* ============================== */
+
+.World {
+    background-color: transparent;
+    border: none;
+
+    height: calc(100vh - 100px);
+    width: calc(100% - 200px);
+
+    margin-top: 100px;
+    margin-left: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.World.ativo {
+    margin-left: 200px;
+}
+
+
+/* MAPA */
+
+.mapa {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+
+}
+
+
+/* GRADE */
+
+.grade-niveis {
+    width: 78%;
+    height: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    justify-items: center;
+    align-items: center;
+
+    padding: 30px;
+
+    gap: 30px;
+}
+
+
+/* CASAS */
+
+.nivel {
+    width: 275px;
+    height: 300px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    cursor: pointer;
+
+    background-color: #080808;
+    color: #FFD43B;
+
+    clip-path: polygon(
+        0% 30%,
+        10% 0%,
+        35% 20%,
+        65% 20%,
+        90% 0%,
+        100% 30%,
+        100% 75%,
+        90% 90%,
+        75% 100%,
+        25% 100%,
+        10% 90%,
+        0% 75%
+    );
+}
+
+
+/* NÍVEIS BRANCOS */
+
+.nivel.branco {
+    background-color: white;
+    color: #503323;
+}
+
+
+/* NÚMEROS */
+
+.numero-nivel {
+    font-family: "Amatic SC", sans-serif;
+
+    font-size: 65px;
+    font-weight: bold;
+    font-style: italic;
+
+    z-index: 2;
+}
+
+
+/* NÍVEIS CONCLUÍDOS */
+
+.nivel.concluido .numero-nivel {
+    color: #80D957;
+}
+
+
+/* BLOQUEADOS */
+
+.nivel.bloqueado {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+
+/* CADEADOS */
+
+.cadeado-nivel {
+    position: absolute;
+
+    bottom: -13px;
+
+    color: #FFD43B;
+
+    font-size: 35px;
+
+    z-index: 5;
+}
+
+
+/* HOVER */
+
+.nivel:not(.bloqueado):hover {
+    transform: scale(1.08);
+}
+
+
+/* LATERAL */
+.lateral-niveis {
+    position: fixed;
+
+    right: 0;
+    bottom: 0;
+
+    width: 300px;
+    height: 100vh;
+
+    border-left: 2px solid white;
+
+    overflow: hidden;
+
+    z-index: 5;
+}
+/* IMAGEM DA ESCADA E DO GATO */
+.lateral-niveis img {
+    position: absolute;
+
+    right: -25;
+    bottom: 0;
+
+    width: 200%;
+    height: 200%;
+
+    object-fit: contain;
+    object-position: right bottom;
+}
+
+
+
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    .World,
+    .World.ativo {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .grade-niveis {
+        width: 100%;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .lateral-niveis {
+        display: none;
+    }
+
+    .nivel {
+        width: 200px;
+        height: 100px;
+    }
+
+    .numero-nivel {
+        font-size: 50px;
+    }
+
+}
